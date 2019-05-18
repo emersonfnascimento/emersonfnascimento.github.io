@@ -1,50 +1,111 @@
-* {
+body {
   margin: 0;
-  padding: 0;
   font-family: 'Ubuntu', sans-serif;
 }
 
+.zona {
+  color: #000;
+  font-size: 2em;
+  transition: all 0.3s linear;
+  margin-bottom: 10px;
+}
+
+.zona > h2 {
+  margin-left: 20px;
+  font-size: 0.8em;
+}
+
+/* HEADER */
 .container {
-  width: 1040px;
-  position: relative;
-  margin: 0 auto;
-}
-.nav-topo {
-  height: 50px;
-  background: #000;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-}
-
-.nav-topo a {
-  text-decoration: none;
-  line-height: 50px;
-  padding: 15px;
-  font-weight: bold;
-  color: #ccc;
-}
-
-.nav-topo a:hover {
-  background: #ccc;
-  color:#000;
-}
-
-.nav-topo ul>li {
-  display: inline-block;
-  text-transform: uppercase;
-}
-
-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background: #560000;
+  height: 50vh;
 }
 
-h1, h3 {
-  padding: 24px;
+.autor {
+  width: 30rem;
   text-align: center;
-  color: #ccc;
+}
+
+.titulo {
+  font-size: 0.5em;
+}
+
+/* NAV */
+.nav-top {
+  display: flex;
+  list-style: none;
+  font-size: 0.6em;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-top {
+    font-size: 0.5em;
+    padding: 0;
+  }
+}
+
+.push {
+  margin-left: auto;
+}
+
+li {
+  padding: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+}
+
+.box {
+  background: #444;
+  padding: 125px;
+  margin: 20px;
+  transition: all 0.3s linear;
+}
+
+.box:hover {
+  -webkit-transform: rotate(-7deg);
+  -moz-transform:rotate(-7deg);
+  -o-transform:rotate(-7deg);
+  transform:rotate(-7deg);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+
+.zona:hover {
+  -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.black {
+  background: #000;
+}
+
+.violet {
+    background: #07123A; /* Old browsers */
+    background: -moz-linear-gradient(top, #07123A 0%, #cf0404 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07123A), color-stop(100%,#07123A)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #C655BE 0%,#07123A 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #C655BE 0%,#07123A 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #C655BE 0%,#07123A 100%); /* IE10+ */
+    background: linear-gradient(top, #C655BE 0%,#07123A 100%); /* W3C */
 }
